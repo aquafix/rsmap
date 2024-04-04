@@ -32,11 +32,16 @@ public class Pathfinder {
     private final ExecutorService exe = Executors.newCachedThreadPool();
     private final LinkPathfinder linkPathfinder;
 
+
+
+
     Pathfinder(ComponentGrid componentGrid, ComponentGraph componentGraph, RemoteTilePathfinder remoteTilePathfinder) {
         this.componentGrid = componentGrid;
         this.remoteTilePathfinder = remoteTilePathfinder;
         var linkDistances = new LinkDistances(remoteTilePathfinder, componentGrid, componentGraph);
         this.linkPathfinder = new LinkPathfinder(componentGrid, componentGraph, linkDistances, exe);
+
+
     }
 
     Pathfinder(GraphStore graphStore, RemoteTilePathfinder remoteTilePathfinder) {

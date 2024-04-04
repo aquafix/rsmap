@@ -7,7 +7,7 @@ public class PlayerTime {
     private int time;
     private int x;
     private int y;
-    private Point pathObserved;
+
     private int actionObserved;
     private int plane;
     private int[] equip;
@@ -29,9 +29,9 @@ public class PlayerTime {
         return time;
     }
 
-    public Point getPathObserved() {
-        return pathObserved;
-    }
+    public int getX() {return x;}
+
+    public int getY() {return y;}
 
     public int getActionObserved() {
         return actionObserved;
