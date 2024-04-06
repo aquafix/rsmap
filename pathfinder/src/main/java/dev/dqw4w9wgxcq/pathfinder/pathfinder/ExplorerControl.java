@@ -29,7 +29,7 @@ private Pathfinder aPathFinder = null;
 
         this.exploredTiles = new HashSet<>();
         this.botPaths = new HashMap<>();
-        this.botPositions = (Map<PlayerInfo, Point>) new HashSet<>();
+        this.botPositions = new HashMap<>();
         this.random = new Random();
         this.aPathFinder = aPathFinder;
 
